@@ -27,6 +27,15 @@
         };
     };
 
+    macros {
+        macro_arrow: macro_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT>;
+            label = "MACRO_ARROW";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -38,28 +47,28 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp E           &kp R        &kp T      &kp Y           &kp U            &kp I      &kp O    &kp P     &kp MINUS
-&kp LCTRL     &kp A  &kp S  &kp D           &kp F        &kp G      &kp H           &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_ALT  &kp Z  &kp X  &kp C           &kp V        &kp B      &kp N           &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-                            &kp LEFT_SHIFT  &lt 1 SPACE  &kp ESC    &mt LCMD ENTER  &lt 2 BACKSPACE  &kp F18
+&kp TAB       &kp Q  &kp W  &kp E  &kp R                 &kp T      &kp Y           &kp U            &kp I      &kp O    &kp P     &kp MINUS
+&kp LCTRL     &kp A  &kp S  &kp D  &kp F                 &kp G      &kp H           &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_ALT  &kp Z  &kp X  &kp C  &kp V                 &kp B      &kp N           &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
+                            &mo 1  &mt LEFT_SHIFT SPACE  &kp ESC    &mt LCMD ENTER  &lt 2 BACKSPACE  &kp F18
             >;
         };
 
-        nav {
+        lower {
             bindings = <
-&trans  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)    &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)       &kp LS(STAR)  &kp MINUS         &kp EQUAL          &trans
-&trans  &trans        &trans      &trans         &kp LEFT_SHIFT  &trans           &kp LEFT       &kp DOWN           &kp UP        &kp RIGHT         &trans             &trans
-&trans  &trans        &trans      &trans         &trans          &trans           &trans         &trans             &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-                                  &trans         &trans          &trans           &trans         &kp LA(BACKSPACE)  &trans
+&trans  &kp LS(EXCL)  &kp LS(AT)            &kp LS(POUND)          &kp LS(DLLR)    &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)       &kp LS(STAR)  &kp MINUS         &kp EQUAL          &trans
+&trans  &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_SHIFT  &trans           &kp LEFT       &kp DOWN           &kp UP        &kp RIGHT         &trans             &trans
+&trans  &trans        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans          &trans           &trans         &trans             &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+                                            &trans                 &trans          &trans           &trans         &kp LA(BACKSPACE)  &trans
             >;
         };
 
-        symbols {
+        raise {
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4        &kp N5          &kp N6                &kp N7                 &kp N8            &kp N9             &kp N0  &trans
-&trans  &trans  &trans  &trans  &trans        &trans          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &trans
-&trans  &trans  &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV            &kp C_PP               &kp C_NEXT        &trans             &trans  &trans
-                        &trans  &trans        &trans          &trans                &trans                 &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4        &kp N5          &kp N6      &kp N7    &kp N8      &kp N9  &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans        &trans          &trans      &trans    &trans      &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_PP  &kp C_NEXT  &trans  &trans  &trans
+                        &trans  &trans        &trans          &trans      &trans    &trans
             >;
         };
 
