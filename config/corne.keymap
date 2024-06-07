@@ -65,10 +65,10 @@
 
         raise {
             bindings = <
-&trans  &trans     &kp GRAVE    &kp SLASH  &kp QUESTION  &kp STAR         &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS       &trans    &trans
-&trans  &kp TILDE  &kp PERCENT  &kp LPAR   &kp RPAR      &kp AMPERSAND    &kp EQUAL      &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp UNDERSCORE  &kp PIPE  &trans
-&trans  &trans     &kp DOLLAR   &kp AT     &kp EXCL      &kp HASH         &kp BACKSLASH  &kp LT            &kp GT             &kp CARET       &trans    &trans
-                                &trans     &trans        &trans           &trans         &trans            &trans
+&bt BT_NXT  &trans     &kp GRAVE    &kp SLASH  &kp QUESTION  &kp STAR         &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS       &trans    &trans
+&trans      &kp TILDE  &kp PERCENT  &kp LPAR   &kp RPAR      &kp AMPERSAND    &kp EQUAL      &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp UNDERSCORE  &kp PIPE  &trans
+&trans      &trans     &kp DOLLAR   &kp AT     &kp EXCL      &kp HASH         &kp BACKSLASH  &kp LT            &kp GT             &kp CARET       &trans    &trans
+                                    &trans     &trans        &trans           &trans         &trans            &trans
             >;
         };
 
