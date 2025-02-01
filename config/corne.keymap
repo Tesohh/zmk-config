@@ -88,8 +88,6 @@
             >;
         };
 
-        extra2 {
-        };
     };
 
     conditional_layers {
