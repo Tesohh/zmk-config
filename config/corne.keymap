@@ -40,6 +40,8 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "base";
+            status = "reserved";
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -55,6 +57,8 @@
         };
 
         lower {
+            display-name = "lower";
+            status = "reserved";
             bindings = <
 &trans  &kp N1        &kp N2        &kp N3  &kp N4  &kp N5            &kp N6      &kp N7            &kp N8      &kp N9        &kp N0        &trans
 &trans  &trans        &trans        &trans  &trans  &trans            &kp LEFT    &kp DOWN          &kp UP      &kp RIGHT     &trans        &trans
@@ -64,6 +68,8 @@
         };
 
         raise {
+            display-name = "raise";
+            status = "reserved";
             bindings = <
 &kp GRAVE  &kp EXCL  &kp AT       &kp HASH  &kp DOLLAR  &kp ASTERISK     &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans     &trans    &trans
 &trans     &trans    &kp PERCENT  &kp LPAR  &kp RPAR    &kp AMPERSAND    &kp EQUAL      &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans     &kp PIPE  &trans
@@ -73,6 +79,7 @@
         };
 
         tri {
+            status = "reserved";
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans         &trans       &trans  &trans  &trans  &trans  &trans
 &trans      &trans        &trans        &trans        &trans  &sys_reset     &sys_reset   &trans  &trans  &trans  &trans  &trans
@@ -82,7 +89,6 @@
         };
 
         extra2 {
-            status = "reserved";
         };
     };
 
