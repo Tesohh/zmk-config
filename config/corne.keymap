@@ -80,6 +80,10 @@
                                         &trans        &trans  &trans         &trans       &trans  &trans
             >;
         };
+
+        extra2 {
+            status = "reserved";
+        };
     };
 
     conditional_layers {
