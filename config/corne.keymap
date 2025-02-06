@@ -67,5 +67,25 @@
                 extra_3 {
                         status = "reserved";
                 };
+
+                extra_4 {
+                        status = "reserved";
+                };
+
+                extra_5 {
+                        status = "reserved";
+                };
+
+                extra_6 {
+                        status = "reserved";
+                };
+
+                extra_7 {
+                        status = "reserved";
+                };
+
+                extra_8 {
+                        status = "reserved";
+                };
         };
 };
