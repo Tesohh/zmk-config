@@ -38,10 +38,10 @@
 
         mac_raise {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&kp GRAVE  &kp EXCL   &kp AT       &kp HASH              &kp DOLLAR             &kp ASTERISK     &kp PLUS   &kp LBKT        &kp RBKT         &trans  &trans         &kp UNDERSCORE
+&kp TILDE  &kp CARET  &kp PERCENT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND    &kp EQUAL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans  &kp SEMICOLON  &kp DOUBLE_QUOTES
+&trans     &trans     &trans       &trans                &trans                 &trans           &trans     &trans          &kp LT           &kp GT  &kp QUESTION   &kp PIPE
+                                   &trans                &trans                 &trans           &trans     &trans          &trans
             >;
         };
 
