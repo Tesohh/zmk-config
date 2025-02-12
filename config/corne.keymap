@@ -31,7 +31,7 @@
             bindings = <
 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6      &kp N7            &kp N8      &kp N9        &kp N0        &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT    &kp DOWN          &kp UP      &kp RIGHT     &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT  &kp C_VOL_DN  &kp C_VOL_UP  &kp K_MUTE
+&trans  &to 5   &trans  &trans  &trans  &trans    &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT  &kp C_VOL_DN  &kp C_VOL_UP  &kp K_MUTE
                         &trans  &trans  &trans    &trans      &trans            &trans
             >;
         };
@@ -60,6 +60,34 @@
 &trans  &trans      &trans      &trans      &trans      &trans        &kp LG(LEFT)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT)  &trans      &kp LG(EQUAL)
 &trans  &trans      &trans      &trans      &trans      &trans        &trans        &trans              &trans            &trans         &trans      &trans
                                 &trans      &trans      &trans        &trans        &kp LG(BACKSPACE)   &trans
+            >;
+        };
+
+        windows_base {
+            display-name = "Base";
+            bindings = <
+&kp TAB         &kp Q  &kp W  &kp E         &kp R      &kp T        &kp Y          &kp U            &kp I         &kp O    &kp P     &kp MINUS
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F      &kp G        &kp H          &kp J            &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z  &kp X  &kp C         &kp V      &kp B        &kp N          &kp M            &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSLASH
+                              &kp LEFT_ALT  &kp SPACE  &lt 6 ESC    &mt RET LCTRL  &lt 7 BACKSPACE  &kp LEFT_GUI
+            >;
+        };
+
+        windows_lower {
+            bindings = <
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6      &kp N7            &kp N8      &kp N9        &kp N0        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT    &kp DOWN          &kp UP      &kp RIGHT     &trans        &trans
+&trans  &to 0   &trans  &trans  &trans  &trans    &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT  &kp C_VOL_DN  &kp C_VOL_UP  &kp K_MUTE
+                        &trans  &trans  &trans    &trans      &trans            &trans
+            >;
+        };
+
+        windows_raise {
+            bindings = <
+&kp GRAVE  &kp EXCL   &kp AT       &kp HASH              &kp DOLLAR             &kp ASTERISK     &kp PLUS   &kp LBKT        &kp RBKT         &trans  &trans         &kp UNDERSCORE
+&kp TILDE  &kp CARET  &kp PERCENT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND    &kp EQUAL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans  &kp SEMICOLON  &kp DOUBLE_QUOTES
+&trans     &trans     &trans       &trans                &trans                 &trans           &trans     &trans          &kp LT           &kp GT  &kp QUESTION   &kp PIPE
+                                   &trans                &trans                 &trans           &trans     &trans          &trans
             >;
         };
     };
