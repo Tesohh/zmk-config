@@ -47,19 +47,19 @@
 
         mac_wm {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N5)    &kp LA(N6)    &kp LA(N7)         &kp LA(N8)  &kp LA(N9)     &kp LA(N0)  &trans
+&trans  &kp LA(Q)   &kp LA(W)   &kp LA(E)   &kp LA(R)   &kp LA(T)     &kp LA(LEFT)  &kp LA(DOWN)       &kp LA(UP)  &kp LA(RIGHT)  &trans      &trans
+&trans  &trans      &trans      &trans      &trans      &trans        &kp LA(N)     &kp LA(M)          &trans      &trans         &trans      &trans
+                                &trans      &trans      &trans        &trans        &kp LA(BACKSPACE)  &trans
             >;
         };
 
         mac_tm {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)    &kp LG(N6)    &kp LG(N7)          &kp LG(N8)        &kp LG(N9)     &kp LG(N0)  &kp LG(MINUS)
+&trans  &trans      &trans      &trans      &trans      &trans        &kp LG(LEFT)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT)  &trans      &kp LG(EQUAL)
+&trans  &trans      &trans      &trans      &trans      &trans        &trans        &trans              &trans            &trans         &trans      &trans
+                                &trans      &trans      &trans        &trans        &kp LG(BACKSPACE)   &trans
             >;
         };
     };
