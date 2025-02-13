@@ -26,11 +26,25 @@
         win_enter {
             bindings = <&kp ENTER>;
             key-positions = <22 23>;
+            layers = <5>;
         };
 
         win_bksp {
             bindings = <&kp BACKSPACE>;
             key-positions = <10 11>;
+            layers = <5>;
+        };
+
+        windows_screenshot {
+            bindings = <&kp LG(LS(S))>;
+            key-positions = <16 15 14 13>;
+            layers = <5>;
+        };
+
+        mac_screenshot {
+            bindings = <&kp LG(LS(NUMBER_4))>;
+            key-positions = <13 14 15 16>;
+            layers = <0>;
         };
     };
 
@@ -39,7 +53,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TPD_WM";
             #binding-cells = <0>;
-            bindings = <&mo 3>, <&mo 4>;
+            bindings = <&mo 3>, <&mo 4>, <&mo 4>;
+        };
+
+        tpd_winalt: tpd_winalt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TPD_WINALT";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT>, <&kp LEFT_WIN>, <&kp LEFT_WIN>;
         };
     };
 
@@ -101,10 +122,10 @@
         windows_base {
             display-name = " windowsBase";
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E         &kp R      &kp T        &kp Y        &kp U                &kp I      &kp O    &kp P     &kp MINUS
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F      &kp G        &kp H        &kp J                &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z  &kp X  &kp C         &kp V      &kp B        &kp N        &kp M                &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-                              &kp LEFT_ALT  &kp SPACE  &lt 6 ESC    &lt 7 ENTER  &mt LCTRL BACKSPACE  &mo 7
+&kp TAB         &kp Q  &kp W  &kp E        &kp R      &kp T        &kp Y        &kp U                &kp I      &kp O    &kp P     &kp MINUS
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D        &kp F      &kp G        &kp H        &kp J                &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z  &kp X  &kp C        &kp V      &kp B        &kp N        &kp M                &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
+                              &tpd_winalt  &kp SPACE  &lt 6 ESC    &lt 7 ENTER  &mt LCTRL BACKSPACE  &mo 7
             >;
         };
 
