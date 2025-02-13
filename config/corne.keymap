@@ -22,6 +22,25 @@
             key-positions = <29 28>;
             layers = <5>;
         };
+
+        win_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <22 23>;
+        };
+
+        win_bksp {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <10 11>;
+        };
+    };
+
+    behaviors {
+        tpd_wm: tpd_wm {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TPD_WM";
+            #binding-cells = <0>;
+            bindings = <&mo 3>, <&mo 4>;
+        };
     };
 
     keymap {
@@ -36,10 +55,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E  &kp R                 &kp T        &kp Y         &kp U            &kp I         &kp O    &kp P     &kp MINUS
-&mo 1      &kp A  &kp S  &kp D  &kp F                 &kp G        &kp H         &kp J            &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C  &kp V                 &kp B        &kp N         &kp M            &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSLASH
-                         &mo 3  &mt LEFT_SHIFT SPACE  &lt 4 ESC    &mt RET LCMD  &lt 2 BACKSPACE  &kp LEFT_ALT
+&kp TAB    &kp Q  &kp W  &kp E    &kp R                 &kp T        &kp Y        &kp U               &kp I         &kp O    &kp P     &kp MINUS
+&mo 1      &kp A  &kp S  &kp D    &kp F                 &kp G        &kp H        &kp J               &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z  &kp X  &kp C    &kp V                 &kp B        &kp N        &kp M               &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSLASH
+                         &tpd_wm  &mt LEFT_SHIFT SPACE  &lt 1 ESC    &lt 2 ENTER  &mt LCMD BACKSPACE  &kp LEFT_ALT
             >;
         };
 
@@ -82,10 +101,10 @@
         windows_base {
             display-name = " windowsBase";
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E         &kp R      &kp T    &kp Y    &kp U          &kp I      &kp O    &kp P     &kp MINUS
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F      &kp G    &kp H    &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z  &kp X  &kp C         &kp V      &kp B    &kp N    &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-                              &kp LEFT_ALT  &kp SPACE  &mo 6    &kp RET  &kp BACKSPACE  &mo 7
+&kp TAB         &kp Q  &kp W  &kp E         &kp R      &kp T        &kp Y        &kp U                &kp I      &kp O    &kp P     &kp MINUS
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F      &kp G        &kp H        &kp J                &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z  &kp X  &kp C         &kp V      &kp B        &kp N        &kp M                &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
+                              &kp LEFT_ALT  &kp SPACE  &lt 6 ESC    &lt 7 ENTER  &mt LCTRL BACKSPACE  &mo 7
             >;
         };
 
